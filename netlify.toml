@@ -1,0 +1,40 @@
+# ============================================
+# Netlify Configuration for ProTypingTest.in
+# ============================================
+
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Security & Cache Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# API Route Rewrites
+[[redirects]]
+  from = "/api/cert-session"
+  to = "/.netlify/functions/create-session"
+  status = 200
+
+[[redirects]]
+  from = "/api/sign-cert"
+  to = "/.netlify/functions/sign-cert"
+  status = 200
+
+[[redirects]]
+  from = "/api/verify-cert"
+  to = "/.netlify/functions/verify-cert"
+  status = 200
+

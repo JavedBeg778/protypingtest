@@ -1,0 +1,29 @@
+# ============================================
+
+# robots.txt for ProTypingTest.in
+
+# ============================================
+
+User-agent: *
+Allow: /
+
+# Private Areas
+
+Disallow: /auth/
+Disallow: /results/
+Disallow: /dashboard/
+Disallow: /temp/
+Disallow: /cgi-bin/
+
+# Public Content
+
+Allow: /assets/
+Allow: /tests/
+Allow: /tools/
+Allow: /blog/
+Allow: /pages/
+Allow: /certificate/
+
+# Sitemap
+
+Sitemap: https://protypingtest.in/sitemap.xml

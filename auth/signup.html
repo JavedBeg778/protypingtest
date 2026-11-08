@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-adsense-account" content="ca-pub-1227031935917376">
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    
+    <!-- SEO Meta Tags -->
+    <title>Sign Up - Pro Typing Test | Create Free Account</title>
+    <meta name="description" content="Create your free account on Pro Typing Test to track your typing progress, save results, and access all features.">
+    <meta name="keywords" content="sign up, register, create account, typing test account, free account">
+    <meta name="author" content="Javed - Pro Typing Test">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://protypingtest.in/auth/signup">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://protypingtest.in/auth/signup">
+    <meta property="og:title" content="Sign Up - Pro Typing Test">
+    <meta property="og:description" content="Create your free account on Pro Typing Test">
+    <meta property="og:image" content="https://protypingtest.in/assets/images/signup-og.jpg">
+    <meta property="og:site_name" content="Pro Typing Test">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://protypingtest.in/auth/signup">
+    <meta name="twitter:title" content="Sign Up - Pro Typing Test">
+    <meta name="twitter:description" content="Create your free account on Pro Typing Test">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    
+    <!-- CSS FILES - Updated paths -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset to prevent horizontal scroll */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        /* Signup Page Specific Styles */
+        .signup-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            width: 100%;
+            overflow-x: hidden;
+        }
+        
+        .signup-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            width: 100%;
+        }
+        
+        .signup-wrapper {
+            max-width: 550px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        .signup-card {
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            border-radius: 40px;
+            padding: 50px 45px;
+            box-shadow: 0 20px 40px var(--shadow-color);
+            transition: all var(--transition-speed) ease;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+        
+        .signup-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-success), var(--accent-warning));
+        }
+        
+        .signup-card:hover {
+            border-color: var(--accent-primary);
+            box-shadow: 0 30px 60px var(--shadow-hover);
+            transform: translateY(-5px);
+        }
+        
+        .signup-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .signup-header h1 {
+            font-size: clamp(2rem, 5vw, 2.5rem);
+            color: var(--accent-primary);
+            margin-bottom: 10px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+        
+        .signup-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        /* Full Logo Display */
+        .full-logo {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent-primary);
+            text-align: center;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+            white-space: nowrap;
+        }
+        
+        .full-logo span {
+            color: var(--text-primary);
+        }
+        
+        .signup-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .form-group label {
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-left: 5px;
+        }
+        
+        .form-group label i {
+            color: var(--accent-primary);
+            font-size: 1.1rem;
+        }
+        
+        .input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        
+        .input-icon {
+            position: absolute;
+            left: 18px;
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            transition: color var(--transition-speed) ease;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 16px 18px 16px 50px;
+            border: 2px solid var(--border-color);
+            border-radius: 50px;
+            background: var(--bg-card);
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            transition: all var(--transition-speed) ease;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 4px var(--accent-light);
+            transform: scale(1.01);
+        }
+        
+        .form-control:focus + .input-icon {
+            color: var(--accent-primary);
+        }
+        
+        .form-control::placeholder {
+            color: var(--text-muted);
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+        
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 1.2rem;
+            padding: 8px;
+            transition: all var(--transition-speed) ease;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .password-toggle:hover {
+            color: var(--accent-primary);
+            background: var(--accent-light);
+            transform: scale(1.1);
+        }
+        
+        .terms-group {
+            margin: 10px 0 5px;
+        }
+        
+        .checkbox-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+        }
+        
+        .checkbox-wrapper input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: var(--accent-primary);
+        }
+        
+        .checkbox-wrapper span {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        
+        .checkbox-wrapper a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .checkbox-wrapper a:hover {
+            text-decoration: underline;
+        }
+        
+        .signup-btn-primary {
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all var(--transition-speed) ease;
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 10px 20px rgba(43, 110, 217, 0.3);
+            width: 100%;
+        }
+        
+        .signup-btn-primary:hover {
+            background: linear-gradient(135deg, var(--accent-hover), var(--accent-primary));
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px var(--shadow-hover);
+        }
+        
+        .signup-btn-primary:active {
+            transform: translateY(0);
+        }
+        
+        .signup-btn-primary:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .social-signup {
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .social-signup p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            position: relative;
+            font-weight: 500;
+        }
+        
+        .social-signup p::before,
+        .social-signup p::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 25%;
+            height: 2px;
+            background: var(--border-color);
+        }
+        
+        .social-signup p::before {
+            left: 0;
+        }
+        
+        .social-signup p::after {
+            right: 0;
+        }
+        
+        .social-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .social-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 14px;
+            border: 2px solid var(--border-color);
+            border-radius: 50px;
+            background: var(--bg-card);
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all var(--transition-speed) ease;
+            max-width: 160px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .social-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .social-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .social-btn:hover {
+            border-color: var(--accent-primary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px var(--shadow-hover);
+        }
+        
+        .social-btn.google:hover {
+            border-color: #DB4437;
+            color: #DB4437;
+        }
+        
+        .social-btn.github:hover {
+            border-color: #333;
+            color: #333;
+        }
+        
+        .login-prompt {
+            margin-top: 25px;
+            text-align: center;
+            padding: 15px 0 0;
+            border-top: 2px dashed var(--border-color);
+        }
+        
+        .login-prompt p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+        
+        .login-prompt a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all var(--transition-speed) ease;
+            padding: 8px 20px;
+            border-radius: 40px;
+            display: inline-block;
+            margin-top: 8px;
+        }
+        
+        .login-prompt a:hover {
+            color: var(--accent-hover);
+            background: var(--accent-light);
+            transform: scale(1.05);
+        }
+        
+        /* Alert Messages */
+        .alert {
+            padding: 15px 20px;
+            border-radius: 50px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            animation: slideInDown 0.4s ease;
+            border: 2px solid transparent;
+            width: 100%;
+        }
+        
+        .alert-error {
+            background: rgba(220, 53, 69, 0.1);
+            border-color: var(--accent-danger);
+            color: var(--accent-danger);
+        }
+        
+        .alert-success {
+            background: rgba(40, 167, 69, 0.1);
+            border-color: var(--accent-success);
+            color: var(--accent-success);
+        }
+        
+        .alert-info {
+            background: rgba(23, 162, 184, 0.1);
+            border-color: var(--accent-info);
+            color: var(--accent-info);
+        }
+        
+        /* Loading Spinner */
+        .spinner {
+            width: 22px;
+            height: 22px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+            display: inline-block;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        /* Password Strength Meter */
+        .password-strength {
+            margin-top: 8px;
+            padding: 0 5px;
+        }
+        
+        .strength-bar {
+            height: 5px;
+            background: var(--border-color);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 5px;
+        }
+        
+        .strength-fill {
+            height: 100%;
+            width: 0%;
+            transition: all 0.3s ease;
+        }
+        
+        .strength-text {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .signup-container {
+                padding: 30px 15px;
+            }
+            
+            .signup-card {
+                padding: 35px 25px;
+                border-radius: 30px;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .social-buttons {
+                gap: 15px;
+            }
+            
+            .social-btn {
+                padding: 12px;
+                font-size: 0.95rem;
+                max-width: none;
+            }
+            
+            .full-logo {
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .signup-card {
+                padding: 25px 18px;
+                border-radius: 25px;
+            }
+            
+            .signup-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .full-logo {
+                font-size: 1.5rem;
+                white-space: normal;
+                line-height: 1.3;
+            }
+            
+            .form-control {
+                padding: 14px 14px 14px 45px;
+                font-size: 0.9rem;
+            }
+            
+            .input-icon {
+                font-size: 1rem;
+                left: 15px;
+            }
+            
+            .password-toggle {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+            
+            .social-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .social-btn {
+                width: 100%;
+            }
+            
+            .signup-btn-primary {
+                padding: 14px;
+                font-size: 1rem;
+            }
+            
+            .checkbox-wrapper span {
+                font-size: 0.85rem;
+            }
+            
+            .login-prompt p {
+                font-size: 0.95rem;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            .signup-card {
+                padding: 20px 12px;
+            }
+            
+            .full-logo {
+                font-size: 1.3rem;
+            }
+            
+            .form-group label {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button class="theme-btn" onclick="toggleTheme()">
+            <span class="light-icon">☀️</span>
+            <span class="dark-icon">🌙</span>
+            <span id="themeText">Dark Mode</span>
+        </button>
+    </div>
+
+    <div class="signup-page">
+        <!-- Simple Header - Updated links -->
+        <header class="main-header" style="border-bottom: 2px solid var(--border-color); background: var(--bg-secondary);">
+            <div class="logo-area">
+                <div class="site-title" onclick="location.href='/'" style="cursor: pointer;">ProTypingTest.in</div>
+            </div>
+            <div class="header-right">
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰ Menu</button>
+                <button class="login-btn" onclick="location.href='/auth/login'">Log In</button>
+            </div>
+        </header>
+
+        <!-- Mobile Menu - Updated all links -->
+        <div id="mobileMenu" style="display: none; background: var(--bg-secondary); padding: 20px; border-radius: 12px; margin: 10px 20px; border: 2px solid var(--border-color);">
+            <nav>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 15px;"><a href="/" style="color: var(--text-primary); text-decoration: none; font-size: 18px; display: block; padding: 8px; border-radius: 8px;">🏠 Home</a></li>
+                    <li style="margin-bottom: 15px;"><a href="/tools/typing-lessons" style="color: var(--text-primary); text-decoration: none; font-size: 18px; display: block; padding: 8px; border-radius: 8px;">📚 Typing Lessons</a></li>
+                    <li style="margin-bottom: 15px;"><a href="/tools/tricky-keys" style="color: var(--text-primary); text-decoration: none; font-size: 18px; display: block; padding: 8px; border-radius: 8px;">🔑 Tricky Keys</a></li>
+                    <li style="margin-bottom: 15px;"><a href="/tools/typing-benchmark" style="color: var(--text-primary); text-decoration: none; font-size: 18px; display: block; padding: 8px; border-radius: 8px;">📊 Typing Benchmark</a></li>
+                    <li style="margin-bottom: 15px;"><a href="/certificate/typing-certificate" style="color: var(--text-primary); text-decoration: none; font-size: 18px; display: block; padding: 8px; border-radius: 8px;">📜 Typing Certification</a></li>
+                    <li style="margin-bottom: 15px;"><a href="/tools/bigram-blitz" style="color: var(--text-primary); text-decoration: none; font-size: 18px; display: block; padding: 8px; border-radius: 8px;">⚡ Bigram Blitz</a></li>
+                    <li style="margin-bottom: 15px;"><a href="/tools/typing-games" style="color: var(--text-primary); text-decoration: none; font-size: 18px; display: block; padding: 8px; border-radius: 8px;">🎮 Typing Games</a></li>
+                    <li style="margin-bottom: 15px;"><a href="/tools/typing-challenge" style="color: var(--text-primary); text-decoration: none; font-size: 18px; display: block; padding: 8px; border-radius: 8px;">🏆 Typing Challenge</a></li>
+                    <li style="margin-bottom: 15px;"><a href="/pages/about" style="color: var(--text-primary); text-decoration: none; font-size: 18px; display: block; padding: 8px; border-radius: 8px;">📄 About Us</a></li>
+                    <li style="margin-bottom: 15px;"><a href="/pages/contact" style="color: var(--text-primary); text-decoration: none; font-size: 18px; display: block; padding: 8px; border-radius: 8px;">📞 Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Signup Container -->
+        <div class="signup-container">
+            <div class="signup-wrapper">
+                <div class="signup-card">
+                    <div class="signup-header">
+                        <!-- Full Logo Display -->
+                        <div class="full-logo">
+                            ProTypingTest.in
+                        </div>
+                        <h1>Create Account</h1>
+                        <p>Join thousands of typers improving daily</p>
+                    </div>
+
+                    <!-- Alert Message (Hidden by default) -->
+                    <div id="alertMessage" class="alert" style="display: none;"></div>
+
+                    <!-- Signup Form -->
+                    <form id="signupForm" class="signup-form" onsubmit="handleSignup(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">
+                                    <i>👤</i> First Name
+                                </label>
+                                <div class="input-wrapper">
+                                    <span class="input-icon">👤</span>
+                                    <input type="text" id="firstName" class="form-control" 
+                                           placeholder="John" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastName">
+                                    <i>👥</i> Last Name
+                                </label>
+                                <div class="input-wrapper">
+                                    <span class="input-icon">👥</span>
+                                    <input type="text" id="lastName" class="form-control" 
+                                           placeholder="Doe" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">
+                                <i>📧</i> Email Address
+                            </label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">📧</span>
+                                <input type="email" id="email" class="form-control" 
+                                       placeholder="your@email.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="username">
+                                <i>@</i> Username
+                            </label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">@</span>
+                                <input type="text" id="username" class="form-control" 
+                                       placeholder="johndoe123" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">
+                                <i>🔒</i> Password
+                            </label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">🔒</span>
+                                <input type="password" id="password" class="form-control" 
+                                       placeholder="Create a strong password" required onkeyup="checkPasswordStrength()">
+                                <button type="button" class="password-toggle" onclick="togglePassword('password')">
+                                    👁️
+                                </button>
+                            </div>
+                            <!-- Password Strength Meter -->
+                            <div class="password-strength">
+                                <div class="strength-bar">
+                                    <div class="strength-fill" id="strengthFill"></div>
+                                </div>
+                                <span class="strength-text" id="strengthText">Enter password</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmPassword">
+                                <i>✓</i> Confirm Password
+                            </label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">✓</span>
+                                <input type="password" id="confirmPassword" class="form-control" 
+                                       placeholder="Re-enter password" required>
+                                <button type="button" class="password-toggle" onclick="togglePassword('confirmPassword')">
+                                    👁️
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="terms-group">
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox" id="terms" required>
+                                <span>I agree to the <a href="/pages/terms">Terms of Service</a> and <a href="/pages/disclaimer">Privacy Policy</a></span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="signup-btn-primary" id="signupButton">
+                            <span>Create Account</span>
+                            <span id="signupSpinner" class="spinner" style="display: none;"></span>
+                        </button>
+                    </form>
+
+                    <!-- Social Signup -->
+                    <div class="social-signup">
+                        <p>Or sign up with</p>
+                        <div class="social-buttons">
+                            <button type="button" class="social-btn google" onclick="socialSignup('Google')">
+                                <span style="font-size: 1.3rem;">G</span> Google
+                            </button>
+                            <button type="button" class="social-btn github" onclick="socialSignup('GitHub')">
+                                <span style="font-size: 1.3rem;">⌨️</span> GitHub
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Login Prompt - Updated link -->
+                    <div class="login-prompt">
+                        <p>Already have an account?</p>
+                        <a href="/auth/login">Sign In →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer - Updated all links -->
+        <footer class="test-footer" style="margin-top: 0;">
+            <div class="footer-container">
+                <!-- LEFT SIDE: Logo + Copyright -->
+                <div class="footer-left">
+                    <div class="footer-logo">ProTypingTest.in</div>
+                    <div class="footer-copyright">© 2026 ProTypingTest.in | All Rights Reserved</div>
+                </div>
+                
+                <!-- CENTER: Links -->
+                <div class="footer-center">
+                    <div class="footer-links-grid">
+                        <a href="/pages/about">About</a>
+                        <a href="/pages/contact">Contact</a>
+                        <a href="/pages/feedback">Feedback</a>
+                        <a href="/blog/index">Blog</a>
+                        <a href="/pages/privacy-policy">Privacy Policy</a>
+                        <a href="/pages/sitemap">Sitemap</a>
+                        <a href="/pages/disclaimer">Disclaimer</a>
+                        <a href="/pages/terms-conditions">Terms & Conditions</a>
+                        <a href="/pages/math-test">Math Test</a>
+                        <a href="/pages/faq">FAQ</a>
+                    </div>
+                </div>
+                
+                <!-- RIGHT SIDE: Platform info -->
+                <div class="footer-right">
+                    <p>ProTypingTest.in is an independent typing practice platform for educational purposes.</p>
+                    <p>Based in India.</p>
+                    <p>Contact: <a href="mailto:javedbhai12q@gmail.com">javedbhai12q@gmail.com</a></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JS - Updated path -->
+    <script src="/js/main.js"></script>
+    
+    <script>
+        // Theme toggle
+        window.toggleTheme = function() {
+            const body = document.body;
+            const themeText = document.getElementById('themeText');
+            
+            if (body.hasAttribute('data-theme')) {
+                body.removeAttribute('data-theme');
+                themeText.textContent = 'Dark Mode';
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                themeText.textContent = 'Light Mode';
+                localStorage.setItem('theme', 'dark');
+            }
+        };
+        
+        // Mobile menu toggle
+        window.toggleMobileMenu = function() {
+            const menu = document.getElementById('mobileMenu');
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'block';
+            } else {
+                menu.style.display = 'none';
+            }
+        };
+        
+        // Toggle password visibility - Fixed
+        window.togglePassword = function(fieldId) {
+            const passwordInput = document.getElementById(fieldId);
+            const toggleBtn = event.target;
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleBtn.textContent = '🔒';
+            } else {
+                passwordInput.type = 'password';
+                toggleBtn.textContent = '👁️';
+            }
+        };
+        
+        // Password strength checker
+        window.checkPasswordStrength = function() {
+            const password = document.getElementById('password').value;
+            const strengthFill = document.getElementById('strengthFill');
+            const strengthText = document.getElementById('strengthText');
+            
+            let strength = 0;
+            
+            if (password.length >= 8) strength += 25;
+            if (password.match(/[a-z]+/)) strength += 25;
+            if (password.match(/[A-Z]+/)) strength += 25;
+            if (password.match(/[0-9]+/)) strength += 25;
+            if (password.match(/[$@#&!]+/)) strength += 25;
+            
+            // Cap at 100
+            strength = Math.min(strength, 100);
+            
+            strengthFill.style.width = strength + '%';
+            
+            if (strength === 0) {
+                strengthFill.style.background = 'var(--border-color)';
+                strengthText.textContent = 'Enter password';
+            } else if (strength < 50) {
+                strengthFill.style.background = 'var(--accent-danger)';
+                strengthText.textContent = 'Weak password';
+            } else if (strength < 75) {
+                strengthFill.style.background = 'var(--accent-warning)';
+                strengthText.textContent = 'Medium password';
+            } else {
+                strengthFill.style.background = 'var(--accent-success)';
+                strengthText.textContent = 'Strong password';
+            }
+        };
+        
+        // Show alert message
+        function showAlert(message, type) {
+            const alertDiv = document.getElementById('alertMessage');
+            alertDiv.textContent = message;
+            alertDiv.className = `alert alert-${type}`;
+            alertDiv.style.display = 'flex';
+            
+            setTimeout(() => {
+                alertDiv.style.display = 'none';
+            }, 4000);
+        }
+        
+        // Social signup handler
+        window.socialSignup = function(provider) {
+            showAlert(`✨ ${provider} signup will be available in future update!`, 'info');
+        };
+        
+        // Handle signup
+        window.handleSignup = function(event) {
+            event.preventDefault();
+            
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const terms = document.getElementById('terms').checked;
+            
+            const signupButton = document.getElementById('signupButton');
+            const spinner = document.getElementById('signupSpinner');
+            
+            // Validation
+            if (!firstName || !lastName || !email || !username || !password || !confirmPassword) {
+                showAlert('Please fill in all fields', 'error');
+                return;
+            }
+            
+            if (!email.includes('@') || !email.includes('.')) {
+                showAlert('Please enter a valid email address', 'error');
+                return;
+            }
+            
+            if (username.length < 3) {
+                showAlert('Username must be at least 3 characters', 'error');
+                return;
+            }
+            
+            if (password.length < 6) {
+                showAlert('Password must be at least 6 characters', 'error');
+                return;
+            }
+            
+            if (password !== confirmPassword) {
+                showAlert('Passwords do not match', 'error');
+                return;
+            }
+            
+            if (!terms) {
+                showAlert('Please accept Terms of Service and Privacy Policy', 'error');
+                return;
+            }
+            
+            // Show loading state
+            signupButton.disabled = true;
+            spinner.style.display = 'inline-block';
+            
+            // Simulate signup
+            setTimeout(() => {
+                showAlert('Account created successfully! Redirecting to login...', 'success');
+                
+                setTimeout(() => {
+                    window.location.href = '/auth/login.html';
+                }, 2000);
+            }, 1500);
+        };
+        
+        // Load saved theme
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.setAttribute('data-theme', 'dark');
+                document.getElementById('themeText').textContent = 'Light Mode';
+            }
+            
+            // Add animation to card on load
+            const signupCard = document.querySelector('.signup-card');
+            signupCard.style.animation = 'slideInDown 0.6s ease';
+        });
+    </script>
+</body>
+</html>

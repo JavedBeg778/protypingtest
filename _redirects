@@ -1,0 +1,32 @@
+# ============================================
+# Netlify Redirects for ProTypingTest.in
+# ============================================
+
+# API Functions
+/api/cert-session /.netlify/functions/create-session 200
+/api/sign-cert /.netlify/functions/sign-cert 200
+/api/verify-cert /.netlify/functions/verify-cert 200
+
+# WWW -> NON-WWW
+https://www.protypingtest.in/* https://protypingtest.in/:splat 301!
+
+# Clean URLs for Tests
+/tests/* /tests/:splat.html 200
+
+# Clean URLs for Tools
+/tools/* /tools/:splat.html 200
+
+# Clean URLs for Blog
+/blog/* /blog/:splat.html 200
+
+# Clean URLs for Pages
+/pages/* /pages/:splat.html 200
+
+# Clean URLs for Certificate
+/certificate/* /certificate/:splat.html 200
+
+# Remove .html from URLs
+/*.html /:splat 301
+
+# Custom 404
+/* /404.html 404

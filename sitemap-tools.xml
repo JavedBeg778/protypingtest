@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>https://protypingtest.in/tools/typing-games</loc>
+        <lastmod>2026-06-06</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://protypingtest.in/tools/typing-lessons</loc>
+        <lastmod>2026-06-06</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://protypingtest.in/tools/typing-benchmark</loc>
+        <lastmod>2026-06-06</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://protypingtest.in/tools/typing-challenge</loc>
+        <lastmod>2026-06-06</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://protypingtest.in/tools/tricky-keys</loc>
+        <lastmod>2026-06-06</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://protypingtest.in/tools/bigram-blitz</loc>
+        <lastmod>2026-06-06</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://protypingtest.in/tools/story-typing</loc>
+        <lastmod>2026-06-06</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+</urlset>
